@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       post "/auto_login", to: "auth#auto_login"
 
       resources :stations, only: [:index]
-      resources :cards, only: [:index, :update]
+      resources :cards, only: [:show, :update]
       resources :transactions, only: [:index, :create, :show]
     end
   end

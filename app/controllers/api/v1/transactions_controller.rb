@@ -11,7 +11,8 @@ class Api::V1::TransactionsController < ApplicationController
     if transaction.valid?
       render json: {
         status: :success,
-        transaction: transaction
+        transaction: transaction,
+        card: transaction.card
       }
     else
       render json: {
